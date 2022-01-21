@@ -1,0 +1,104 @@
+body{
+    /* width: 960px; */
+    font-family: arial, sans-serif;
+    color: #fcfcfc;
+    background: #355664;
+    margin: 0 175px;
+}
+
+.header__title{
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+    margin: 0;
+}
+
+.header__name{
+    text-align: right;
+    font-family: cursive;
+}
+
+.header__navbar-title{
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.header__navbar-name{
+    list-style: none;
+    padding: 0 12px;
+}
+
+.header__navbar-name--link{
+    font-size: 22px;
+}
+
+li:nth-child(1) a{
+    color: #7CB3E9;
+}
+
+li:nth-child(2) a{
+    color: #8EC45B;
+}
+
+li:nth-child(3) a{
+    color: #fff;
+}
+
+.container{
+    background-color: #213E4A;
+    border-radius: 10px;
+}
+
+.container__char{
+    padding: 0 16px;
+}
+
+
+.container__title{
+    margin-top: 12px;
+}
+
+.container__title-name{
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+    border-bottom: 3px solid #416371;
+    padding: 20px 0;
+    margin: 0%;
+}
+
+.container__poem-con1 p:nth-child(1){
+    color: #8EC45B;
+}
+
+p{
+    text-align: justify; /* chữ thẳng hàng */
+}
+
+.container__poem{
+    display: flex;
+}
+
+.container__poem-con1{
+    margin-right: 10px;
+}
+
+.container__poem-con2{
+    margin: 16px 0 16px 10px;
+}
+
+.container__poem-img{
+    border-radius: 5px;
+    Border: 3px solid #142830;
+
+}
+
+.footer{
+    margin: 12px 0 30px 0;
+    border-top: 3px solid #142830;
+}
+
+.footer__con{
+    text-align: center;
+}
