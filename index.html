@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container__img{
+            text-align: center;
+            border-radius: 4px;
+        }
+        
+        body{
+            background-image: url(./assets/img/bg.jpg); background-position: center; background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container__img img{
+            animation: animation 1s  infinite;
+            padding: 50px 30px;
+        }
+
+        .container__button button{
+            background-color: red;
+            border: none;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 4px;
+        }
+        
+        @keyframes animation{
+            10% {
+            transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+            20% {
+            transform: rotate(25deg) scale(1) skew(1deg);
+            }
+            30% {
+            transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+            40% {
+            transform: rotate(25deg) scale(1) skew(1deg);
+            }
+            50% {
+            transform: rotate(0deg) scale(1) skew(1deg);
+            }
+            100% {
+            transform: rotate(0deg) scale(1) skew(1deg);
+            }
+        }
+    </style>
+</head>
+<body >
+    <div style="width: 1000px; height: 600px; margin: auto; transform: translateY(50px);" class="container">
+        <div class="container1">
+            <div class="container__img">
+                <img id="img1" src="./assets/img/bau.png" alt="">
+                <img id="img2" src="./assets/img/bau.png" alt="">
+                <img id="img3" src="./assets/img/bau.png" alt="">
+            </div>
+            <div style="text-align: center; margin-top: 50px;" class="container__button">
+                <button onclick="random_image()">xốc</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    image_array = [
+        'bau.png',
+        'ca.png',
+        'cua.png',
+        'ga.png',
+        'huou.png',
+        'tom.png'
+    ];
+    image_array1 = [
+        'huou.png',
+        'ga.png',
+        'tom.png',
+        'ca.png',
+        'bau.png',
+        'cua.png',
+    ];
+    image_array2 = [
+        'ga.png',
+        'ca.png',
+        'bau.png',
+        'cua.png',
+        'tom.png',
+        'huou.png',
+    ];
+
+    function random_image(){
+        random = Math.floor(Math.random() *image_array.length);
+        selected_image = image_array[random];
+        random = Math.floor(Math.random() *image_array1.length);
+        selected_image1 = image_array1[random];
+        random = Math.floor(Math.random() *image_array2.length);
+        selected_image2 = image_array2[random];
+        document.getElementById("img1").src = `./assets/img/${selected_image}`;
+        document.getElementById("img2").src = `./assets/img/${selected_image1}`;
+        document.getElementById("img3").src = `./assets/img/${selected_image2}`;
+    }
+</script>
+</html>
